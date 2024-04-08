@@ -2,15 +2,10 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
+       
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,56 +17,60 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            load = new Button();
+            save = new Button();
+            name = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            fname = new TextBox();
+            country = new TextBox();
+            sname = new TextBox();
+            city = new TextBox();
+            number = new TextBox();
+            label7 = new Label();
+            dt = new DateTimePicker();
+            female = new RadioButton();
+            male = new RadioButton();
+            label8 = new Label();
+            label9 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // load
             // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(419, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Load";
-            button1.UseVisualStyleBackColor = true;
+            load.FlatStyle = FlatStyle.Popup;
+            load.Location = new Point(390, 26);
+            load.Name = "load";
+            load.Size = new Size(94, 29);
+            load.TabIndex = 0;
+            load.Text = "Load";
+            load.UseVisualStyleBackColor = true;
+            load.Click += load_Click;
             // 
-            // button2
+            // save
             // 
-            button2.Cursor = Cursors.Hand;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(31, 589);
-            button2.Name = "button2";
-            button2.Size = new Size(413, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = true;
+            save.Cursor = Cursors.Hand;
+            save.FlatStyle = FlatStyle.Popup;
+            save.Location = new Point(31, 512);
+            save.Name = "save";
+            save.Size = new Size(413, 29);
+            save.TabIndex = 1;
+            save.Text = "Save";
+            save.UseVisualStyleBackColor = true;
+            save.Click += save_Click;
             // 
-            // textBox1
+            // name
             // 
-            textBox1.Location = new Point(176, 28);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Name";
-            textBox1.Size = new Size(158, 27);
-            textBox1.TabIndex = 2;
+            name.Location = new Point(176, 28);
+            name.Name = "name";
+            name.PlaceholderText = "Name";
+            name.Size = new Size(158, 27);
+            name.TabIndex = 2;
             // 
             // label1
             // 
@@ -117,7 +116,6 @@
             label5.Size = new Size(34, 20);
             label5.TabIndex = 7;
             label5.Text = "City";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -128,60 +126,124 @@
             label6.TabIndex = 8;
             label6.Text = "Number";
             // 
-            // textBox2
+            // fname
             // 
-            textBox2.Location = new Point(176, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 9;
+            fname.Location = new Point(176, 108);
+            fname.Name = "fname";
+            fname.Size = new Size(125, 27);
+            fname.TabIndex = 9;
             // 
-            // textBox3
+            // country
             // 
-            textBox3.Location = new Point(176, 192);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 10;
+            country.Location = new Point(176, 192);
+            country.Name = "country";
+            country.Size = new Size(125, 27);
+            country.TabIndex = 10;
             // 
-            // textBox4
+            // sname
             // 
-            textBox4.Location = new Point(176, 152);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 11;
+            sname.Location = new Point(176, 152);
+            sname.Name = "sname";
+            sname.Size = new Size(125, 27);
+            sname.TabIndex = 11;
             // 
-            // textBox5
+            // city
             // 
-            textBox5.Location = new Point(176, 236);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 12;
+            city.Location = new Point(176, 236);
+            city.Name = "city";
+            city.Size = new Size(125, 27);
+            city.TabIndex = 12;
             // 
-            // textBox6
+            // number
             // 
-            textBox6.Location = new Point(176, 273);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 13;
+            number.Location = new Point(176, 273);
+            number.Name = "number";
+            number.Size = new Size(125, 27);
+            number.TabIndex = 13;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(31, 332);
+            label7.Name = "label7";
+            label7.Size = new Size(70, 20);
+            label7.TabIndex = 14;
+            label7.Text = "Birthdate";
+            // 
+            // dt
+            // 
+            dt.Format = DateTimePickerFormat.Short;
+            dt.Location = new Point(176, 327);
+            dt.Name = "dt";
+            dt.Size = new Size(250, 27);
+            dt.TabIndex = 15;
+            // 
+            // female
+            // 
+            female.AutoSize = true;
+            female.Location = new Point(319, 401);
+            female.Name = "female";
+            female.Size = new Size(78, 24);
+            female.TabIndex = 1;
+            female.TabStop = true;
+            female.Text = "Female";
+            female.UseVisualStyleBackColor = true;
+            // 
+            // male
+            // 
+            male.AutoSize = true;
+            male.Location = new Point(191, 401);
+            male.Name = "male";
+            male.Size = new Size(63, 24);
+            male.TabIndex = 0;
+            male.TabStop = true;
+            male.Text = "Male";
+            male.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(35, 401);
+            label8.Name = "label8";
+            label8.Size = new Size(57, 20);
+            label8.TabIndex = 17;
+            label8.Text = "Gender";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.ForeColor = Color.Red;
+            label9.Location = new Point(133, 461);
+            label9.Name = "label9";
+            label9.Size = new Size(13, 20);
+            label9.TabIndex = 18;
+            label9.Text = " ";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(536, 641);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            ClientSize = new Size(525, 562);
+            Controls.Add(label9);
+            Controls.Add(female);
+            Controls.Add(label8);
+            Controls.Add(male);
+            Controls.Add(dt);
+            Controls.Add(label7);
+            Controls.Add(number);
+            Controls.Add(city);
+            Controls.Add(sname);
+            Controls.Add(country);
+            Controls.Add(fname);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(name);
+            Controls.Add(save);
+            Controls.Add(load);
             ForeColor = SystemColors.ActiveCaptionText;
             Name = "Form1";
             Text = "Register";
@@ -191,19 +253,25 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
+        private Button load;
+        private Button save;
+        private TextBox name;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox fname;
+        private TextBox country;
+        private TextBox sname;
+        private TextBox city;
+        private TextBox number;
+        private Label label7;
+        private DateTimePicker dt;
+        private RadioButton female;
+        private RadioButton male;
+        private Label label8;
+        private Label label9;
     }
 }
